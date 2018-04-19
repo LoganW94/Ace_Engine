@@ -1,22 +1,15 @@
 import pygame
-from renderer import Renderer
+from Engine.ace_engine import AceEngine
 
 pygame.init()
 clock = pygame.time.Clock()
 FPS = 25
-
-def update():
-	"TBD"
-
-def render():	
+	
 
 def start():
 
 	while True:
 
-		update()
-
-		render()
 
 		clock.tick(FPS)
 
