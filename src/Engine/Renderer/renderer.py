@@ -24,3 +24,6 @@ class Renderer:
 	def __init__(self):
 		self.gs = Screen.new(gw,gh,green,"Test Engine")
 		self.cam = Camera
+
+
+		
