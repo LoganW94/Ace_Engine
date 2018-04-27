@@ -13,7 +13,6 @@ class Utils:
 		self.iLoad = AssetLoader(self.log)
 		self.sLoad = SoundLoader(self.log)
 		
-
 		self.m = None
 		self.i = None
 		self.s = None

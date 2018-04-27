@@ -4,4 +4,4 @@ class SoundLoader(Loader):
 	
 	def __init__(self, logger):
 		self.log = logger
-		Loader.__init__(self.log)
+		Loader.__init__(self, self.log)

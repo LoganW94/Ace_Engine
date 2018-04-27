@@ -3,6 +3,7 @@ from Engine.Renderer.renderer import Renderer
 from Engine.Input.handler import EventHandler
 from Engine.Utils.utils import Utils
 from Engine.Logs.logger import Logger
+from Engine.Utils.updater import Updater
 
 
 class AceEngine:
@@ -19,17 +20,17 @@ class AceEngine:
 		AE.up = Updater(AE.log)
 		
 		"variables"
-		AE.new_input
+		AE.new_input = None
 		
 		return AE
 
 	def get_input(self):
-		AE.eve.get_input()
+		self.new_input = self.eve.get_input()
 
 	def update(self):
 		"will pass all new input into the updater"
-		AE.up.update()
+		self.up.update()
 
 	def render(self):
 		"will render updated objects to screen"
-		AE.ren.draw()				
+		self.ren.render()				

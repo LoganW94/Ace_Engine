@@ -17,6 +17,8 @@ def start():
 
 	while True:
 
+		print("ran")
+		
 		AE.get_input()
 
 		AE.update()

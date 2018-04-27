@@ -7,6 +7,7 @@ class Screen:
 
 		screen = pygame.display.set_mode((width, height))
 		pygame.display.set_caption(caption)
+	"""	
 		try:
 			icon = pygame.image.load(imagepath)
 			pygame.display.set_icon(icon)
@@ -14,6 +15,7 @@ class Screen:
 			Screen.error_msg(screen, "no image")
 		screen.fill(color)
 		return screen
+	"""	
 
 	def error_msg(_screen, _txt):
 
