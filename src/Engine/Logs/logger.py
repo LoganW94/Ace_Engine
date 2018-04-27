@@ -11,7 +11,7 @@ class Logger:
 
 	def report(self, msg):
 		"takes message and adds it to list of messages"
-		self.report_list.append(msg + " " + )
+		self.report_list.append(msg + " ")
 
 	def format_report(self):
 		"formats list as json"

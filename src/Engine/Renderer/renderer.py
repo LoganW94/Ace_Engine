@@ -1,5 +1,5 @@
-from screen import Screen
-from camera import Camera
+from Engine.Renderer.screen import Screen
+from Engine.Renderer.camera import Camera
 
 
 "colors"
@@ -25,5 +25,5 @@ class Renderer:
 		self.gs = Screen.new(gw,gh,green,"Test Engine")
 		self.cam = Camera
 
-
-		
+	def render(self):
+		"draws to screen"		

@@ -1,15 +1,18 @@
-from loadmaps import MapLoader
-from loadassets import AssetLoader
-from loadsounds import SoundLoader
+"class for managing the saving and loading gamestates, and whatever else I can't think of at the moment"
+
+from Engine.Utils.loadmaps import MapLoader
+from Engine.Utils.loadassets import AssetLoader
+from Engine.Utils.loadsounds import SoundLoader
 
 class Utils:
-"class for managing the saving and loading gamestates, and whatever else I can't think of at the moment"
+
 	def __init__(self, logger):
 		"loads in all related classes"
-		self.logger = logger
-		self.mLoad = MapLoader(self.logger)
-		self.iLoad = AssetLoader(self.logger)
-		self.sLoad = SoundLoader(self.logger)
+		self.log = logger
+		self.mLoad = MapLoader(self.log)
+		self.iLoad = AssetLoader(self.log)
+		self.sLoad = SoundLoader(self.log)
+		
 
 		self.m = None
 		self.i = None
@@ -17,9 +20,11 @@ class Utils:
 
 	def mload(self, folder):
 		"loads all maps"
+		self.mLoad.load_items(folder)
 
 	def mReturn(self):
 		"returns array of loaded files"
+		self.m = self.mLoad.return_file()
 		return self.m
 
 	def iload(self, folder):
@@ -35,4 +40,3 @@ class Utils:
 	def sReturn(self):
 		"returns array of loaded files"
 		return self.s
-			

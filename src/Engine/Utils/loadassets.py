@@ -1,6 +1,7 @@
-from loader import Loader
-
+from Engine.Utils.loader import Loader
+"loads all image files"
 class AssetLoader(Loader):
-	"loads all image files"
+	
 	def __init__(self, logger):
-		Loader.__init__(logger)
+		self.log = logger
+		Loader.__init__(self.log)
