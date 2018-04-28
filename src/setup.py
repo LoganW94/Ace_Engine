@@ -1,8 +1,7 @@
 import sys
 from cx_Freeze import setup, Executable
-from Engine.ace_engine import AceEngine
 
-include_files = ['autorun.inf', 'Engine']
+include_files = ['autorun.inf', 'Engine', 'Game']
 base = None
 
 if sys.platform == "win32":

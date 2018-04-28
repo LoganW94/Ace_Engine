@@ -21,9 +21,10 @@ gh = 640
 
 class Renderer:
 
-	def __init__(self, logger):
+	def __init__(self, logger, PY):
 		self.log = logger
-		self.gs = Screen.new(gw,gh,green,"Test Engine")
+		self.PY = PY
+		self.gs = Screen.new(self.PY, gw, gh, green, "Test Engine")
 		self.cam = Camera
 
 	def render(self):

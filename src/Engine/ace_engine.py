@@ -9,13 +9,13 @@ from Engine.Utils.updater import Updater
 class AceEngine:
 
 	@staticmethod
-	def new():
-
-		"classes"	
+	def new(PY):
+		"Instances"	
 		AE = AceEngine()
+		AE.PY = PY
 		AE.log = Logger()
 		AE.uts = Utils(AE.log)
-		AE.ren = Renderer(AE.log)
+		AE.ren = Renderer(AE.log, AE.PY)
 		AE.eve = EventHandler(AE.log)
 		AE.up = Updater(AE.log)
 		
