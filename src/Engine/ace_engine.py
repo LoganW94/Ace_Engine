@@ -16,7 +16,7 @@ class AceEngine:
 		AE.log = Logger()
 		AE.uts = Utils(AE.log)
 		AE.ren = Renderer(AE.log, AE.PY)
-		AE.eve = EventHandler(AE.log)
+		AE.eve = EventHandler(AE.log, AE.PY)
 		AE.up = Updater(AE.log)
 		
 		"variables"

@@ -1,13 +1,12 @@
 "input handler"
 
-import pygame
-
 class EventHandler:
 
-	def __init__(self, logger):
+	def __init__(self, logger, PY):
 		"sets up class variable"
 		"on instanciation it should be passed a json file containing valid keystrokes"
 		self.logger = logger
+		self.PY = PY
 		self.new_input = None
 
 		"temp until dynamic list is added"
@@ -20,13 +19,13 @@ class EventHandler:
 		"escape": "MENU"}
 		
 	def get_input(self):
-		"temp code from old game"
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				pygame.quit()
-				quit()
-			if event.type == pygame.KEYDOWN:
-				key = pygame.key.name(event.key)
+		"this may cause an issue since it is calling init() every frame"
+		self.PY.init() 
+		for event in self.PY.event.get():
+			if event.type == self.PY.QUIT:
+				self.PY.quit()
+			if event.type == self.PY.KEYDOWN:
+				key = self.PY.key.name(event.key)
 				if key in self.keys:
 					self.new_input = self.keys[key]
 				else:
