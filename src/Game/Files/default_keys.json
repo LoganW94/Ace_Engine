@@ -1,0 +1,7 @@
+{"KEYS":{
+	"w": "NORTH", 
+	"s": "SOUTH", 
+	"a": "WEST", 
+	"d": "EAST",
+	"return": "RETURN",
+	"escape": "MENU"}}

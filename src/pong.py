@@ -1,19 +1,26 @@
 #################
+'''
 
+A test game of pong to help flesh out the Ace Engine
+and to act as a proof of concept.
 
-
+'''
 #######################
+
 import pygame as PY
 from Engine.ace_engine import AceEngine
+from Pong.game import Game
 
-AE = AceEngine.new(PY)
 PY.init()
-
 clock = PY.time.Clock()
 FPS = 30
 
+G = Game(PY)
 
-def start():
+AE = AceEngine.new(PY, G)
+		
+
+def start():	
 
 	while True:
 		
@@ -22,7 +29,7 @@ def start():
 		AE.update()
 
 		AE.render()
-
+		
 		clock.tick(FPS)
 
 start()	

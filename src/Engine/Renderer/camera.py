@@ -1,12 +1,11 @@
 
 class Camera:
 
-	def __init__(self, width, height):
+	def __init__(self, game_size):
 		cam_x = 0
 		cam_y = 0
 		self.location = (cam_x, cam_y)
-		self.width = width
-		self.height = height
+		self.game_size = game_size
 
 	def movement(self):
 		"takes a few areguments from somewhere and does something"	

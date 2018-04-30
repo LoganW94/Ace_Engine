@@ -1,19 +1,22 @@
 #################
+'''
 
 
-
+'''
 #######################
 import pygame as PY
 from Engine.ace_engine import AceEngine
 
-AE = AceEngine.new(PY)
 PY.init()
 
-clock = PY.time.Clock()
-FPS = 30
-
+game_name = "Test Engine"
+key_file = "Game/Files/default_keys.json"
 
 def start():
+	AE = AceEngine.new(PY, key_file, game_name)
+
+	clock = PY.time.Clock()
+	FPS = 30
 
 	while True:
 		

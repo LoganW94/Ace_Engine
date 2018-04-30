@@ -15,17 +15,30 @@ yellow = (255,255,0)
 violet = (160,10,226)
 orange = (255,165,0)
 
-gw = 960
-gh = 640
+
 
 
 class Renderer:
 
-	def __init__(self, logger, PY):
+	def __init__(self, logger, PY, game_name, game_size):
 		self.log = logger
 		self.PY = PY
-		self.gs = Screen.new(self.PY, gw, gh, green, "Test Engine")
-		self.cam = Camera
+		self.gs = Screen.new(self.PY, game_size, green, game_name)
+		self.cam = Camera(game_size)
 
-	def render(self):
-		"draws to screen"		
+	def render(self, delta):
+		self.gs.fill(white)
+		"draws to screen"
+		"take delta and only redraw the change"
+
+		"temp render code"
+		for x in delta:
+			obj = x.shape
+			if obj[0] == "circ":
+				self.PY.draw.circle(self.gs, obj[1], obj[2], obj[3], 0)
+			elif obj[0] == "rect":
+				self.PY.draw.rect(self.gs, obj[1], obj[2], 0)
+
+
+
+		self.PY.display.flip()
