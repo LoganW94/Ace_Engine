@@ -1,8 +1,16 @@
+############################
+"the renderer should pre render the frame as an image
+"to then send to pygame, instead of sending each object in the frame"
+"this should alow for more controll of the image"
+"As well as added effects down the line"
+############################
+
 from Engine.Renderer.screen import Screen
 from Engine.Renderer.camera import Camera
 
 
 "colors"
+#TODO import from text doc
 white = (255,255,255)
 black = (0,0,0)
 red = (255,0,0)
