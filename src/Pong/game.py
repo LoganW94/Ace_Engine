@@ -1,6 +1,5 @@
 from Pong.ball import Ball
 from Pong.paddle import Paddle
-#from Pong.gui import Gui
 
 class Game:
 	def __init__(self, PY):
