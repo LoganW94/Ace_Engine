@@ -16,7 +16,7 @@ class AceEngine:
 		AE.log = Logger()
 		AE.uts = Utils(AE.log)
 		AE.eve = EventHandler(AE.log, AE.PY, AE.G.key_file)
-		AE.up = Updater(AE.log, AE.G.init_objs)
+		AE.up = Updater(AE.log, AE.G.game_objs)
 		AE.ren = Renderer(AE.log, AE.PY, AE.G.game_name, AE.G.game_size)		
 				
 		return AE
