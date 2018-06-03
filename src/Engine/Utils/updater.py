@@ -1,4 +1,5 @@
-from Engine.Utils.collision_detection import Collider
+
+from Engine.Collision.collision_detection import Collider
 
 class Updater:
 	def __init__(self, logger, init_objs):
