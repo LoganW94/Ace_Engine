@@ -1,0 +1,7 @@
+{"KEYS":{
+	"w": "UP",
+	"s": "DOWN",
+	"a": "LEFT",
+	"d": "RIGHT",
+	"return": "SELECT",
+	"escape": "BACK"}}
