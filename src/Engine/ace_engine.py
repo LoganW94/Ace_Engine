@@ -27,7 +27,6 @@ class AceEngine:
 	def update(self):
 		"will pass all new input into the updater"
 		self.up.update(self.eve.return_input())
-		self.G.update()
 
 	def render(self):
 		"will render updated objects to screen"

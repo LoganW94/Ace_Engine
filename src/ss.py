@@ -12,13 +12,15 @@ G = Game(PY)
 
 AE = AceEngine.new(PY, G)
 
+G.engine = AE
+
 def start():
 
 	while True:
 	
 		AE.get_input()	
 	
-		AE.update()
+		G.update()
 
 		AE.render()
 
