@@ -8,4 +8,4 @@ class Camera:
 		self.game_size = game_size
 
 	def movement(self):
-		"takes a few areguments from somewhere and does something"	
+		"#TODO take a few areguments from somewhere and do something"

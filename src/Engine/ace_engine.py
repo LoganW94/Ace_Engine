@@ -11,13 +11,12 @@ class AceEngine:
 	def new(PY, G):
 		AE = AceEngine()
 		PY.init()
-		AE.G = G
 		AE.PY = PY	
 		AE.log = Logger()
 		AE.uts = Utils(AE.log)
-		AE.eve = EventHandler(AE.log, AE.PY, AE.G.key_file)
-		AE.up = Updater(AE.log, AE.G.game_objs)
-		AE.ren = Renderer(AE.log, AE.PY, AE.G.game_name, AE.G.game_size)		
+		AE.eve = EventHandler(AE.log, AE.PY, G.key_file)
+		AE.up = Updater(AE.log)
+		AE.ren = Renderer(AE.log, AE.PY, G.game_name, G.game_size)		
 				
 		return AE
 

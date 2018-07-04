@@ -18,11 +18,11 @@ def start():
 
 	while True:
 	
-		AE.get_input()	
+		G.get_input()	
 	
 		G.update()
 
-		AE.render()
+		G.render()
 
 		clock.tick(FPS)
 

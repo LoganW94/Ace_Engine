@@ -8,7 +8,6 @@
 from Engine.Renderer.screen import Screen
 from Engine.Renderer.camera import Camera
 
-
 "colors"
 #TODO import from text doc
 white = (255,255,255)
@@ -24,8 +23,6 @@ violet = (160,10,226)
 orange = (255,165,0)
 
 
-
-
 class Renderer:
 
 	def __init__(self, logger, PY, game_name, game_size):
@@ -36,16 +33,6 @@ class Renderer:
 
 	def render(self, delta):
 		self.gs.fill(white)
-		"draws to screen"
-		"take delta and only redraw the change"
-
-		"temp render code"
-		for x in delta:
-			obj = x.shape
-			if obj[0] == "circ":
-				self.PY.draw.circle(self.gs, obj[1], obj[2], obj[3], 0)
-			elif obj[0] == "rect":
-				self.PY.draw.rect(self.gs, obj[1], obj[2], 0)
 
 
 
